@@ -198,6 +198,7 @@ autostart=${RUN_MASTER}
 autorestart=True
 redirect_stderr=True
 user=${RUN_AS_USER}
+stdout_logfile=/var/log/supervisor/millstone-stdout.log
 
 [program:celery_manager]
 command=gunicorn_django -b 127.0.0.1:${CELERY_MANAGER_WEB_PORT} --workers=$(expr ${NUM_CPU} + 1) --timeout=${TIMEOUT}
@@ -206,6 +207,7 @@ autostart=${RUN_WORKER}
 autorestart=True
 redirect_stderr=True
 user=${RUN_AS_USER}
+stdout_logfile=/var/log/supervisor/celery_manager-stdout.log
 
 [program:celery]
 command=python manage.py celery worker --loglevel=info
@@ -214,6 +216,7 @@ autostart=${RUN_WORKER}
 autorestart=True
 redirect_stderr=True
 user=${RUN_AS_USER}
+stdout_logfile=/var/log/supervisor/celery-stdout.log
 
 EOF
 
