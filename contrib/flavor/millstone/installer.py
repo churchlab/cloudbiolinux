@@ -6,7 +6,7 @@ import os
 INSTALLATION_PATH = "$HOME/millstone"
 
 REPO_URL = "git@github.com:churchlab/millstone.git"
-REPO_STABLE_COMMIT = "634db63de2fb275719868839bf44bd9b4b9f016e"
+REPO_STABLE_COMMIT = "3c643a23c205ca244f0798d8434f2cb775f6d990"
 
 BOOTSTRAP_SCRIPT = """#!/bin/bash
 set -x

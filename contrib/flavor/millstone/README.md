@@ -90,10 +90,6 @@ database.
 
 ##### Building an Amazon Machine Image (AMI)
 
-First, clean up remaining SSH keys and history files.
-
-    fab -c contrib/flavor/millstone/ec2.txt -i SSH_KEY_FILE -u ubuntu -H ec2-xx-xx-xx-xx.compute-1.amazonaws.com install_biolinux:flavor=millstone,target=clean
-
 Go to EC2 Dashboard inside AWS Console <<a href="https://console.aws.amazon.com/">console.aws.amazon.com</a>>. Find the instance on which we just installed our software, and select "Create Image" in "Actions" tab.
 
 ##### Creating VM from AMI
